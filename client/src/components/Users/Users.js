@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Users.module.css";
-import api from "./../../utils/api";
+import {axiosInstance} from "./../../utils/api";
 import { FaCheck, FaTimes } from "react-icons/fa";
 import { Table, Button, Form, Col } from "react-bootstrap";
 import { getUsersFromApi } from "../../utils/apiCalls";
+
+let api = axiosInstance
 
 const acceptableAge = [];
 for (var i = 0; i <= 100; i++) {

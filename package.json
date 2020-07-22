@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "lerna": "^3.20.2"
+  },
+  "dependencies": {
+    "rewire": "^5.0.0"
   }
 }

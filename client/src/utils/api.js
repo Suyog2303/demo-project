@@ -8,4 +8,5 @@ module.exports = {
   get: (...x) => {
     return axiosInstance.get(...x);
   },
+  axiosInstance
 };
