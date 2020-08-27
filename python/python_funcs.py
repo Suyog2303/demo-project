@@ -102,7 +102,7 @@ def getUsers(minAge, maxAge):
 
 def augmentClientData(user):
     if "completeName" in user.name:
-        user.name.completeName = user.name.firstname + ' ' + user.name.lastname
+        user.name.name = user.name.firstname + ' ' + user.name.lastname
     user.year_of_birth = datetime.datetime.now().year - user.age
     user.coordinates = geolocateClient(user.address.city, user.address.road)
     return user
