@@ -1,5 +1,5 @@
 // Primitive arguments
-function calculateCommissionJs(volume) {
+function calculateCommission(volume) {
   var fee, rate, commission, bonus, award;
   fee = 0.0;
   bonus = 0.0;
@@ -31,7 +31,7 @@ function calculateCommissionJs(volume) {
 }
 
 // Structured arguments
-function getClientAgeGenerationJs(client) {
+function getClientAgeGeneration(client) {
   if (client.age <= 18) {
     return "Gen.Z";
   } else if (client.age > 18 && client.age < 34) {
@@ -44,30 +44,21 @@ function getClientAgeGenerationJs(client) {
 }
 
 // Structured arguments with deep nesting
-function getClientScoreJs(client) {
+function getClientScore(client) {
   if (client.age.firstname && client.age.lastname) {
-    var total_volume = 0;
+    var total_compliant_volume = 0;
     var dates = [];
-    for (let i = 0; i < client.orders.length; i++) {
+    for (i = 0; i < client.orders.length; i++) {
       if (
-        client.orders[i].order_id !== "-1" &&
+        client.orders[i].order_id != -1 &&
         client.orders[i].currency === "EUR"
       ) {
         dates.push(client.orders[i].date);
-        total_volume += client.orders[i].volume;
+        total_compliant_volume += client.orders[i].volume;
       }
     }
-    return total_volume / (dates.length + 1);
+    return total_compliant_volume / dates.length;
   } else {
     return 0;
   }
-}
-
-let userStore = [];
-
-function addUserToStore(user) {
-  if (user.name) {
-    userStore.push(user);
-  }
-  return userStore;
 }

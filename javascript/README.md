@@ -1,4 +1,4 @@
-# Ponicode Demo Project - Python
+# Ponicode Demo Project - JavaScript
 
 This project is a starter kit to dive into Ponicode Unit Testing. Check the full documentation at https://www.ponicode.com/docs/get-started/installation.
 
